@@ -1,0 +1,49 @@
+body
+{
+    background-color: rgb(51, 51, 51);
+    color: beige;
+}
+
+p
+{
+    color:deepskyblue;
+}
+
+header
+{
+    text-align: center;
+}
+
+h1
+{
+    color:rgb(200, 211, 211);
+    text-align: center;
+}
+h2
+{
+    color: beige;
+    text-align: left;
+}
+img
+{
+    max-width: 640px;
+    max-height: 480px;
+}
+#memeImage
+{
+    margin-right: 200px;
+}
+nav
+{
+    display: block;
+    float: left;
+    padding: 5px;
+    line-height: 30px;
+    height: 6000px;
+    width: 200px;
+}
+footer
+{
+    text-align: center;
+    margin-right: 200px;
+}
