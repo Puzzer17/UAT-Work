@@ -1,0 +1,43 @@
+body
+{
+    background-color: rgb(51, 51, 51);
+    color: beige;
+}
+
+p
+{
+    color:deepskyblue;
+    font-family: "Comic Sans MS", Times, serif;
+}
+
+header
+{
+    text-align: center;
+}
+
+h1
+{
+    color:rgb(200, 211, 211);
+    text-align: center;
+}
+h2
+{
+    color:darkseagreen;
+}
+
+footer
+{
+    text-align: center;
+    margin-right: 200px;
+}
+
+sTitle 
+{
+    color:darkorange;
+    font-family: "Comic Sans MS", Times, serif;
+}
+form
+{
+    color: darkorange;
+    font-family: "Comic Sans MS", Times, serif;
+}
