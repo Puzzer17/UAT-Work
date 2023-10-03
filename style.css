@@ -1,0 +1,36 @@
+body
+{
+    background-color: rgb(51, 51, 51);
+    color: beige;
+}
+
+p
+{
+    color:deepskyblue;
+}
+
+header
+{
+    text-align: center;
+}
+
+h1
+{
+    color:rgb(200, 211, 211);
+    text-align: center;
+}
+h2
+{
+    color:darkseagreen;
+}
+
+footer
+{
+    text-align: center;
+    margin-right: 200px;
+}
+
+cTitle 
+{
+    color:forestgreen
+}
