@@ -4,14 +4,58 @@ function strings()
 {
     //Used for debug output in console and inline HTML
     var debug=false;
+    var final="";
     if(debug) debugOutput("Initializing Variables");
-    var str1= document.getElementById("initString").value;
-    if(debug) debugOutput("Obtained str1 variable: " + str1);
-    if(debug) debugOutput("Obtaining lowercase of str1 ");
-    var lowStr1=toSmall(str1);
-    if(debug) debugOutput("Obtained lowStr1: " + lowStr1);
+    var firstName= document.getElementById("firstName").value;
+    if(debug) debugOutput("Obtained firstName: " + firstName);
+    var lastName= document.getElementById("lastName").value;
+    if(debug) debugOutput("Obtained lastName: " + lastName);
+    var zipCode= document.getElementById("zipCode").value;
 
+    //Checking if fields are empty
+    if(firstName == "" || lastName == "" || zipCode == "")
+    {
+        document.getElementById("userMSG").style.color = 'red';
+        document.getElementById("userMSG").innerHTML = "Please fill in the values below";
+        return false;
+    }
+    //Checking information around the Zipcode with option to enable debugging
+    if(toSmall(zipCode) == "debug") debug=true;
+    if(debug) debugOutput("Obtained zipCode: " + zipCode);
+    if(zipCode.length < 5 || zipCode.length > 5) {
+        document.getElementById("userMSG").style.color = 'red';
+        document.getElementById("userMSG").innerHTML = "Zip code needs 5 characters, try again."
+        document.getElementById("palOutput").innerHTML = "";
+        return false;
+    } 
+    else if (zipCode.length == 5) document.getElementById("userMSG").innerHTML = "";
+    //Checking information regarding First and Last name
+    var length=firstName.length+lastName.length;
+    if(debug) debugOutput("Now Zipcode passed, character length: " + length);
+    if(length > 20) {
+        if(debug) debugOutput("Character Length Failed");
+        document.getElementById("userMSG").style.color = 'red';
+        document.getElementById("userMSG").innerHTML = "Unfortunately you have a long name, try shortening it";
+        document.getElementById("palOutput").innerHTML = "";
+        return false;
+    }
+    else if (length <= 20) 
+    {
+        if(debug) debugOutput("Character Length Passed");
+        document.getElementById("palOutput").style.color = 'lightgreen';
+        document.getElementById("palOutput").innerHTML = "Congratualations " + lastName + "! You matched the requirement to recieve a lucky number!";
+        if(debug) debugOutput("Generating Random Number");
+        document.getElementById("userMSG").innerHTML = randomNum();
+        document.getElementById("userMSG").style.color = "lightgreen";
+    }
+//Random number for lucky number
 
+function randomNum()
+{
+    min=1
+    max=2400
+    return Math.floor(Math.random() * (max-min)+min);
+}
 
 //String manipulation
 //Step 1 of palindrome is convert characters to same type
@@ -36,30 +80,13 @@ function toFlip(word)
     return word;
 }
 
-//Creating reverse of String 1
-var revStr1=toSmall(str1);
-if(debug) debugOutput("Converted String 1 to lowercase: " + revStr1);
-revStr1=toFlip(revStr1);
-if(debug) debugOutput("Reversed String 1: " + revStr1);
 
-var final="";
-final.innerHtml = "";
-
-if(revStr1==lowStr1) 
-{
-final="You have found a palindrome";
-document.getElementById("palOutput").style.color= 'green';
-}
-else {
-final="No palindrome detected, try again!";
-document.getElementById("palOutput").style.color= 'deepskyblue';
-}
-document.getElementById("palOutput").innerHTML = final;
 
 
 function debugOutput(reason)
 {
     console.log(reason);
+    document.getElementById("debugStr").style.color = 'red';
     document.getElementById("debugStr").innerHTML = "Last Debug Output: " + reason;
 }
 }
