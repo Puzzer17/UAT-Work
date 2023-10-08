@@ -1,0 +1,50 @@
+body
+{
+    background-image: url("background.jpg");
+    background-color: rgb(51, 51, 51);
+    color: beige;
+    background-position: center;
+    background-size:auto;
+}
+#userMSG
+{
+    color:rgb(75, 255, 246);
+    font-family: "Comic Sans MS", Times, serif;
+    font-size:large;
+}
+
+header
+{
+    text-align: center;
+}
+
+h1
+{
+    color:rgb(40, 173, 173);
+    text-align: center;
+}
+h2
+{
+    color:darkseagreen;
+}
+
+footer
+{
+    text-align: center;
+    margin-right: 200px;
+}
+
+sTitle 
+{
+    color:rgb(132, 152, 20);
+    font-family: "Comic Sans MS", Times, serif;
+}
+form
+{
+    color: rgb(135, 200, 243);
+    font-family: "Comic Sans MS", Times, serif;
+}
+button {
+    height: 100px;
+    width: 100px;
+}
