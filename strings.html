@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>People Program</title>
+    <title>Palindrome Checker</title>
     <link rel = "stylesheet" href = "style.css">
     <script src = "code.js"></script>
 </head>
@@ -18,6 +18,7 @@
     <br>
     <center>
         <p id="userMSG"> </p>
+        <p id="userMSG1"> </p>
     <form id = "str" onsubmit = "return false">
         Enter your First name:  <input type = "text" id ="firstName"/>
     </form>
@@ -27,8 +28,13 @@
     <form id ="str" onsubmit = "return false">
         Enter your Zip Code: <input type = "text" id ="zipCode"/>
     </form>
-    <input type = "Submit" onclick = "strings();"/>
+    <button onclick = "strings();">Try Your Luck</button>
+    <br>
+    <br>
+    <audio id="radio" controls hidden>
+        <source src="honey_jam.mp3" type="audio/mpeg"> <!-- The title of the mp3 has author information-->
+    </audio>
     </center>
-
+    <img id="meowdy" src="meowdy.jpg" style = "position: absolute; height: auto;" hidden = "true">
 </body>
 </html>
