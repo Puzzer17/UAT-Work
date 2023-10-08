@@ -4,6 +4,7 @@
 //as image variables need to be initialized after the page is loaded
 document.addEventListener("DOMContentLoaded",function() {
     document.getElementById("pauseButton").disabled = true;
+    document.getElementById("stopButton").disabled = true;
 });
 //overall variable to see if code should run or if it should stop
 var scriptLock=false;
