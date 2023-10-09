@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Created by Connor C. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+    <link rel = "stylesheet" href = "style.css">
+    <script src = "code.js"></script>
+</head>
+<!--  This is Assignment 3.1 -->
+<div class="navContainer">
+    <button id="navi" onclick="naviBar();"><h2> Navigation</h2></button><br>
+    <nav id="navBar">
+        <a href="../main.html">Home</a><br>
+        <a href="../Assignment1.1/index.html">Assignment 1.1</a><br>
+        <a href="../Assignment2.1/game.html">Assignment 2.1</a><br>
+        <a href="./palindrome.html">Assignment 3.1</a><br>
+        <a href="../Assignment3.2/strings.html">Assignment 3.2</a><br>
+        <a href="../Assignment4.1/strings.html">Assignment 4.1</a><br>
+    </nav>
+</div>
+<body>
+    <h1><center>Welcome to the</center> </h1>
+    <h1><center><sTitle>Palindrome Checker</sTitle></center></h1>
+    <br>
+    <p id="debugStr"> </p>
+    <br>
+    <p id="palOutput"> </p>
+    <br>
+    <form id = "str" onsubmit = "return false">
+        Check your Palindrome:  <input type = "text" id ="initString"/>
+        <input type = "submit" onclick = "strings();"/>
+    </form>
+    <br>
+    <img id="resultIMG" style="height:auto">
+</body>
+</html>

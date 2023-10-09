@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Created by Connor C. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People Program</title>
+    <link rel = "stylesheet" href = "style.css">
+    <script src = "code.js"></script>
+</head>
+<!--  This is Assignment 3.2 -->
+<div class="navContainer">
+    <button id="navi" onclick="naviBar();"><h2> Navigation</h2></button><br>
+    <nav id="navBar">
+        <a href="../main.html">Home</a><br>
+        <a href="../Assignment1.1/index.html">Assignment 1.1</a><br>
+        <a href="../Assignment2.1/game.html">Assignment 2.1</a><br>
+        <a href="../Assignment3.1/palindrome.html">Assignment 3.1</a><br>
+        <a href="./strings.html">Assignment 3.2</a><br>
+        <a href="../Assignment4.1/strings.html">Assignment 4.1</a><br>
+    </nav>
+</div>
+<body>
+    <h1><center>Welcome to the</center> </h1>
+    <h1><center><sTitle>People Program</sTitle></center></h1>
+    <br>
+    <p id="debugStr"> </p>
+    <br>
+    <center><p id="palOutput"> </p></center>
+    <br>
+    <center>
+        <p id="userMSG"> </p>
+        <p id="userMSG1"> </p>
+    <form id = "str" onsubmit = "return false">
+        Enter your First name:  <input type = "text" id ="firstName"/>
+    </form>
+    <form id ="str" onsubmit = "return false">
+        Enter your Last name: <input type = "text" id ="lastName"/>
+    </form>
+    <form id ="str" onsubmit = "return false">
+        Enter your Zip Code: <input type = "text" id ="zipCode"/>
+    </form>
+    <button onclick = "strings();">Try Your Luck</button>
+    <br>
+    <br>
+    <audio id="radio" controls hidden>
+        <source src="honey_jam.mp3" type="audio/mpeg"> <!-- The title of the mp3 has author information-->
+    </audio>
+    </center>
+    <img id="meowdy" src="meowdy.jpg" style = "position: absolute; height: auto;" hidden = "true">
+</body>
+</html>
